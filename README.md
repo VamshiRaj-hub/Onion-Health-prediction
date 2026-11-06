@@ -1,8 +1,9 @@
 # Onion quality classification with GAN augmentation
 
-This project trains one conditional-by-folder DCGAN per class using the **training split only**,
-generates extra training images, extracts MobileNetV2 features, and compares Random Forest,
-SVM, and (optionally) XGBoost classifiers. Validation and test images remain real images.
+This project trains a separate unconditional DCGAN for each class using that class's
+**training images only**. It generates extra training images, extracts MobileNetV2 features,
+and compares Random Forest, SVM, and (optionally) XGBoost classifiers. Validation and test
+images remain real images.
 
 ## 1. Dataset layout
 
