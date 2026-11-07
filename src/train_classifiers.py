@@ -107,7 +107,7 @@ def main():
     try:
         from xgboost import XGBClassifier
         models_to_try["xgboost"] = lambda: XGBClassifier(n_estimators=300, max_depth=5, learning_rate=0.05,
-            subsample=0.9, colsample_bytree=0.9, objective="multi:softprob",
+            subsample=0.9, colsample_bytree=0.9, objective="multi:softmax",
             num_class=len(classes), eval_metric="mlogloss", random_state=42)
     except ImportError:
         print("XGBoost not installed; RF and SVM will still run. Optional: pip install xgboost")
